@@ -14,9 +14,9 @@ class getInfo(object):
     def Getinfo(self):
         print(self.url)
         response = requests.get(url=self.url, headers=self.headers).text
-        print(response)
+        # print(response)
         # 将数据保存到json文件中，防止被反扒后没有数据
-        with open("./outPut/getinfo.log", "w", encoding="utf-8")as fp:
+        with open("./outPut/getinfo.log", "a", encoding="utf-8")as fp:
             fp.write(response)
         return response
 
@@ -47,7 +47,7 @@ class send_massage:
 
 if __name__ == '__main__':
     # 循环30分钟查询一次微博更新
-    global message_old
+    message_old = "null"
     while (1 == 1):
         # 获取动态信息
         getInfoinit = getInfo()
@@ -66,7 +66,9 @@ if __name__ == '__main__':
         # 登录微信
         itchat.auto_login(enableCmdQR=True, hotReload=True)
         # 调用发送微信的函数
-        sendsend = send_massage(qunname="乡音", countext=send_neirong)
+        sendsend = send_massage(qunname="B特战小分队", countext=send_neirong)
+        sendsend.SendChatRoomsMsg()
+        print("发送成功")
         # 保持登录状态
         itchat.run()
         time.sleep(1800)

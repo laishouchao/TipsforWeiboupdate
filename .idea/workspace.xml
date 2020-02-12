@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59325531-0f02-47af-a54a-c98b56e98376" name="Default Changelist" comment="" />
+    <list default="true" id="59325531-0f02-47af-a54a-c98b56e98376" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GetNews.py" beforeDir="false" afterPath="$PROJECT_DIR$/GetNews.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outPut/getinfo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outPut/getinfo.log" beforeDir="false" afterPath="$PROJECT_DIR$/outPut/getinfo.log" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +20,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Xh9rjzScDpWm29MehJNXktQTjT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -22,7 +31,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Python.GetNews">
     <configuration name="GetNews" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -87,6 +98,8 @@
       <option name="presentableId" value="Default" />
       <updated>1581487661011</updated>
       <workItem from="1581487667665" duration="9068000" />
+      <workItem from="1581507166841" duration="227000" />
+      <workItem from="1581507442357" duration="206000" />
     </task>
     <servers />
   </component>
@@ -94,22 +107,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="816" height="912" key="GridCell.Tab.0.bottom" timestamp="1581497502141">
+    <state width="816" height="912" key="GridCell.Tab.0.bottom" timestamp="1581507650174">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="816" height="912" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581497502141" />
-    <state width="816" height="912" key="GridCell.Tab.0.center" timestamp="1581497502141">
+    <state width="816" height="912" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581507650174" />
+    <state width="816" height="912" key="GridCell.Tab.0.center" timestamp="1581507650174">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="816" height="912" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581497502141" />
-    <state width="816" height="912" key="GridCell.Tab.0.left" timestamp="1581497502141">
+    <state width="816" height="912" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581507650174" />
+    <state width="816" height="912" key="GridCell.Tab.0.left" timestamp="1581507650174">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="816" height="912" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581497502141" />
-    <state width="816" height="912" key="GridCell.Tab.0.right" timestamp="1581497502141">
+    <state width="816" height="912" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581507650174" />
+    <state width="816" height="912" key="GridCell.Tab.0.right" timestamp="1581507650174">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="816" height="912" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581497502141" />
+    <state width="816" height="912" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581507650174" />
     <state width="1225" height="347" key="GridCell.Tab.1.bottom" timestamp="1581497502131">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -126,12 +139,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1225" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581497502131" />
-    <state x="645" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1581487675635">
+    <state x="645" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1581507443442">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="645" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581487675635" />
+    <state x="645" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581507443442" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TipsforWeiboupdate$GetNews.coverage" NAME="GetNews Coverage Results" MODIFIED="1581507569713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NetPoliceNews$UserSinaweibopy3.coverage" NAME="UserSinaweibopy3 Coverage Results" MODIFIED="1581488691266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sinaweibopy3" />
     <SUITE FILE_PATH="coverage/NetPoliceNews$GetNews.coverage" NAME="GetNews Coverage Results" MODIFIED="1581495823420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
