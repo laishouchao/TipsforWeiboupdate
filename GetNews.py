@@ -6,7 +6,7 @@ import json
 
 class getInfo(object):
     def __init__(self):
-        self.url = f"https://api.weibo.com/2/statuses/home_timeline.json?access_token=2.00AICJkHKHfXOC0ca80471b00LcIop&count=1"
+        self.url = f"https://api.weibo.com/2/statuses/home_timeline.json?access_token=2.00AICJkHKHfXOC0ca80471b00LcIop&count=2"
         self.headers = {
             "cookie": "Cookie: SINAGLOBAL=4437256218914.105.1579259452117; login_sid_t=1d812c69bc2c6bbd2bf87f05de5330f4; cross_origin_proto=SSL; Ugrow-G0=140ad66ad7317901fc818d7fd7743564; TC-V5-G0=799b73639653e51a6d82fb007f218b2f; _s_tentry=passport.weibo.com; wb_view_log=1920*10801; Apache=150045861391.4657.1581488327664; ULV=1581488328180:2:1:1:150045861391.4657.1581488327664:1579259452857; ALF=1613024337; SSOLoginState=1581488338; SUB=_2A25zR-iCDeRhGeFO4lYW-SrIyjqIHXVQNV1KrDV8PUNbmtANLWzXkW9NQVRWkkB6xC3rYMuF1Khr6nWlgSORPMHZ; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9WWypBWbg6zJc73PgN7FFQAe5JpX5KzhUgL.FoM71KBN1KBXeKq2dJLoIp5LxKqL1-BLBKH0q0-0So.0; SUHB=0la1D27EcGac-S; wvr=6; wb_view_log_7094794416=1920*10801; UOR=xc84.com,widget.weibo.com,www.baidu.com; TC-Page-G0=04dc502e635144031713f186989293c7|1581489979|1581489936; webim_unReadCount=%7B%22time%22%3A1581490107205%2C%22dm_pub_total%22%3A0%2C%22chat_group_client%22%3A0%2C%22allcountNum%22%3A0%2C%22msgbox%22%3A0%7D",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3941.4 Safari/537.36"}
@@ -42,11 +42,11 @@ class send_massage:
                 #  得到群名的唯一标识，进行信息发送
                 itchat.send_msg(self.context, username)
             else:
-                print('No groups found')
+                print('[x]未发现指定的群名称，请检查后重试')
 
 
 if __name__ == '__main__':
-    # 循环30分钟查询一次微博更新
+    # 循环5分钟查询一次微博更新
     message_old = "null"
     while (1 == 1):
         # 获取动态信息
@@ -54,21 +54,27 @@ if __name__ == '__main__':
         info = getInfoinit.Getinfo()
         # 调用格式化函数格式化信息
         infoinit = json.loads(info)
-        from_name = infoinit["statuses"][0]["user"]["name"]
-        from_text = infoinit["statuses"][0]["retweeted_status"]["text"]
+        try:
+            from_name = infoinit["statuses"][0]["user"]["name"]
+            from_text = infoinit["statuses"][0]["retweeted_status"]["text"]
+        except BaseException:
+            # print("[x]API返回数据有误，请稍后再试或检查代码后重试（tips:可通过解注释line:17后运行看到API返回数据）")
+            from_text = infoinit["statuses"][0]["text"] + infoinit["statuses"][0]["original_pic"]
         # 查询是否有微博更新
         if from_text == message_old:
             continue
         else:
             message_old = from_text
-        send_neirong = from_name + "\n更新微博，内容如下:\n" + from_text
+        send_neirong = from_name + "\n更新微博，内容如下:\n" + from_text + "\n该消息来自开源辟谣机器人实例TipsforWeiboupdate(https://github.com/laishouchao/TipsforWeiboupdate )"
         print(send_neirong)
         # 登录微信
         itchat.auto_login(enableCmdQR=True, hotReload=True)
         # 调用发送微信的函数
-        sendsend = send_massage(qunname="B特战小分队", countext=send_neirong)
-        sendsend.SendChatRoomsMsg()
-        print("发送成功")
+        qunname_list = ["济南实力优质靠谱兼职","B特战小分队"]
+        for qunname in qunname_list:
+            sendsend = send_massage(qunname= qunname, countext=send_neirong)
+            sendsend.SendChatRoomsMsg()
+            print("[√]发送消息到群_"+ qunname + "成功!")
         # 保持登录状态
         itchat.run()
-        time.sleep(1800)
+        time.sleep(300)
