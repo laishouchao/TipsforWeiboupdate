@@ -46,7 +46,9 @@ class send_massage:
 
 
 if __name__ == '__main__':
-    # 循环5分钟查询一次微博更新
+    # 登录微信
+    itchat.auto_login(enableCmdQR=True, hotReload=True)
+    # 循环15分钟查询一次微博更新
     message_old = "null"
     while (1 == 1):
         # 获取动态信息
@@ -58,23 +60,33 @@ if __name__ == '__main__':
             from_name = infoinit["statuses"][0]["user"]["name"]
             from_text = infoinit["statuses"][0]["retweeted_status"]["text"]
         except BaseException:
-            # print("[x]API返回数据有误，请稍后再试或检查代码后重试（tips:可通过解注释line:17后运行看到API返回数据）")
-            from_text = infoinit["statuses"][0]["text"] + infoinit["statuses"][0]["original_pic"]
+            try:
+                from_name = infoinit["statuses"][0]["user"]["name"]
+                from_text = infoinit["statuses"][0]["text"] + infoinit["statuses"][0]["original_pic"]
+            except BaseException:
+                try:
+                    from_name = infoinit["statuses"][0]["user"]["name"]
+                    from_text = infoinit["statuses"][0]["text"]
+                except BaseException:
+                    if "error" in info:
+                        print("[x]微博API数据获取出现错误：" + infoinit["error"] + "\t错误代码：" + str(infoinit["error_code"]))
+                    time.sleep(300)
+                    continue
         # 查询是否有微博更新
         if from_text == message_old:
+            print("[!]暂无更新内容")
+            time.sleep(900)
             continue
         else:
             message_old = from_text
         send_neirong = from_name + "\n更新微博，内容如下:\n" + from_text + "\n该消息来自开源辟谣机器人实例TipsforWeiboupdate(https://github.com/laishouchao/TipsforWeiboupdate )"
         print(send_neirong)
-        # 登录微信
-        itchat.auto_login(enableCmdQR=True, hotReload=True)
         # 调用发送微信的函数
-        qunname_list = ["济南实力优质靠谱兼职","B特战小分队"]
+        qunname_list = ["赵春明"]
         for qunname in qunname_list:
-            sendsend = send_massage(qunname= qunname, countext=send_neirong)
+            sendsend = send_massage(qunname=qunname, countext=send_neirong)
             sendsend.SendChatRoomsMsg()
-            print("[√]发送消息到群_"+ qunname + "成功!")
+            print("[√]发送消息到群_" + qunname + "成功!")
         # 保持登录状态
-        itchat.run()
+        # itchat.run()
         time.sleep(300)
