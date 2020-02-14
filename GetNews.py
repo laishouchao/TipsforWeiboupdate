@@ -47,7 +47,7 @@ class send_massage:
 
 if __name__ == '__main__':
     # 登录微信
-    itchat.auto_login(enableCmdQR=True, hotReload=True)
+    itchat.auto_login(enableCmdQR=2, hotReload=True)
     # 循环15分钟查询一次微博更新
     message_old = "null"
     while (1 == 1):
@@ -82,7 +82,7 @@ if __name__ == '__main__':
         send_neirong = from_name + "\n更新微博，内容如下:\n" + from_text + "\n该消息来自开源辟谣机器人实例TipsforWeiboupdate(https://github.com/laishouchao/TipsforWeiboupdate )"
         print(send_neirong)
         # 调用发送微信的函数
-        qunname_list = ["赵春明"]
+        qunname_list = ["5528", "信息化办公室学生群", "2019暑期留校生实习学生群"]
         for qunname in qunname_list:
             sendsend = send_massage(qunname=qunname, countext=send_neirong)
             sendsend.SendChatRoomsMsg()

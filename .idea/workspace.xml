@@ -4,7 +4,6 @@
     <list default="true" id="59325531-0f02-47af-a54a-c98b56e98376" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GetNews.py" beforeDir="false" afterPath="$PROJECT_DIR$/GetNews.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outPut/getinfo.log" beforeDir="false" afterPath="$PROJECT_DIR$/outPut/getinfo.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,30 +97,47 @@
       <workItem from="1581487667665" duration="9068000" />
       <workItem from="1581507166841" duration="227000" />
       <workItem from="1581507442357" duration="206000" />
-      <workItem from="1581580883296" duration="3427000" />
+      <workItem from="1581580883296" duration="3607000" />
+      <workItem from="1581651001013" duration="163000" />
     </task>
+    <task id="LOCAL-00001" summary="2020年2月13日 update">
+      <created>1581588383796</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581588383796</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2020年2月13日 update" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020年2月13日 update" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="719" height="912" key="GridCell.Tab.0.bottom" timestamp="1581588269804">
+    <state x="560" y="113" key="CommitChangelistDialog2" timestamp="1581588381743">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="719" height="912" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581588269804" />
-    <state width="719" height="912" key="GridCell.Tab.0.center" timestamp="1581588269804">
+    <state x="560" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581588381743" />
+    <state width="758" height="912" key="GridCell.Tab.0.bottom" timestamp="1581651166151">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="719" height="912" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581588269804" />
-    <state width="719" height="912" key="GridCell.Tab.0.left" timestamp="1581588269803">
+    <state width="758" height="912" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581651166151" />
+    <state width="758" height="912" key="GridCell.Tab.0.center" timestamp="1581651166151">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="719" height="912" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581588269803" />
-    <state width="719" height="912" key="GridCell.Tab.0.right" timestamp="1581588269804">
+    <state width="758" height="912" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581651166151" />
+    <state width="758" height="912" key="GridCell.Tab.0.left" timestamp="1581651166151">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="719" height="912" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581588269804" />
+    <state width="758" height="912" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581651166151" />
+    <state width="758" height="912" key="GridCell.Tab.0.right" timestamp="1581651166151">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="758" height="912" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581651166151" />
     <state width="1225" height="347" key="GridCell.Tab.1.bottom" timestamp="1581497502131">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -138,13 +154,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1225" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581497502131" />
-    <state x="645" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1581580887546">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1581588388016">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="645" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581580887546" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581588388016" />
+    <state x="645" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1581651000954">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="645" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581651000954" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TipsforWeiboupdate$GetNews.coverage" NAME="GetNews Coverage Results" MODIFIED="1581588213261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TipsforWeiboupdate$GetNews.coverage" NAME="GetNews Coverage Results" MODIFIED="1581651166131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NetPoliceNews$UserSinaweibopy3.coverage" NAME="UserSinaweibopy3 Coverage Results" MODIFIED="1581488691266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sinaweibopy3" />
     <SUITE FILE_PATH="coverage/NetPoliceNews$GetNews.coverage" NAME="GetNews Coverage Results" MODIFIED="1581495823420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
