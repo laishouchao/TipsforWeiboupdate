@@ -2,6 +2,7 @@ import requests
 import itchat
 import time
 import json
+import datetime
 
 
 class getInfo(object):
@@ -46,6 +47,9 @@ class send_massage:
 
 
 if __name__ == '__main__':
+    # 添加时间戳，后期做日志
+    now = datetime.datetime.now()
+    now_time = str(now.strftime("%Y-%m-%d %H:%M:%S"))
     # 登录微信
     itchat.auto_login(enableCmdQR=2, hotReload=True)
     # 循环15分钟查询一次微博更新
@@ -69,24 +73,25 @@ if __name__ == '__main__':
                     from_text = infoinit["statuses"][0]["text"]
                 except BaseException:
                     if "error" in info:
-                        print("[x]微博API数据获取出现错误：" + infoinit["error"] + "\t错误代码：" + str(infoinit["error_code"]))
+                        print(now_time + "[x]微博API数据获取出现错误：" + infoinit["error"] + "\t错误代码：" + str(
+                            infoinit["error_code"]))
                     time.sleep(300)
                     continue
         # 查询是否有微博更新
         if from_text == message_old:
-            print("[!]暂无更新内容")
+            print(now_time + "[!]暂无更新内容")
             time.sleep(900)
             continue
         else:
             message_old = from_text
-        send_neirong = from_name + "\n更新微博，内容如下:\n" + from_text + "\n该消息来自开源辟谣机器人实例TipsforWeiboupdate(https://github.com/laishouchao/TipsforWeiboupdate )"
+        send_neirong = now_time + "\n" + from_name + "\n更新微博，内容如下:\n" + from_text + "\n该消息来自开源辟谣机器人TipsforWeiboupdate"
         print(send_neirong)
         # 调用发送微信的函数
-        qunname_list = ["5528", "信息化办公室学生群", "2019暑期留校生实习学生群"]
+        qunname_list = ["信息化办公室学生群"]
         for qunname in qunname_list:
             sendsend = send_massage(qunname=qunname, countext=send_neirong)
             sendsend.SendChatRoomsMsg()
-            print("[√]发送消息到群_" + qunname + "成功!")
+            print(now_time + "[√]发送消息到群_" + qunname + "成功!")
         # 保持登录状态
         # itchat.run()
         time.sleep(300)
