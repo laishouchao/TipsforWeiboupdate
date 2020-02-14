@@ -75,7 +75,7 @@ if __name__ == '__main__':
                     if "error" in info:
                         print(now_time + "[x]微博API数据获取出现错误：" + infoinit["error"] + "\t错误代码：" + str(
                             infoinit["error_code"]))
-                    time.sleep(300)
+                    time.sleep(900)
                     continue
         # 查询是否有微博更新
         if from_text == message_old:
@@ -94,4 +94,4 @@ if __name__ == '__main__':
             print(now_time + "[√]发送消息到群_" + qunname + "成功!")
         # 保持登录状态
         # itchat.run()
-        time.sleep(300)
+        time.sleep(900)

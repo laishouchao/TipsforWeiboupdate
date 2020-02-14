@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59325531-0f02-47af-a54a-c98b56e98376" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GetNews.py" beforeDir="false" afterPath="$PROJECT_DIR$/GetNews.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outPut/getinfo.log" beforeDir="false" afterPath="$PROJECT_DIR$/outPut/getinfo.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +97,7 @@
       <workItem from="1581507166841" duration="227000" />
       <workItem from="1581507442357" duration="206000" />
       <workItem from="1581580883296" duration="3607000" />
-      <workItem from="1581651001013" duration="1880000" />
+      <workItem from="1581651001013" duration="2212000" />
     </task>
     <task id="LOCAL-00001" summary="2020年2月13日 update">
       <created>1581588383796</created>
@@ -115,21 +113,40 @@
       <option name="project" value="LOCAL" />
       <updated>1581651221957</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2020年2月14日 添加时间戳 修复二维码错位">
+      <created>1581654850824</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1581654850824</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2020年2月13日 update" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020年2月13日 update" />
+    <MESSAGE value="2020年2月14日 添加时间戳 修复二维码错位" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020年2月14日 添加时间戳 修复二维码错位" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="560" y="113" key="CommitChangelistDialog2" timestamp="1581651219737">
+    <state x="560" y="113" key="CommitChangelistDialog2" timestamp="1581654848410">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="560" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581651219737" />
+    <state x="560" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581654848410" />
     <state width="764" height="912" key="GridCell.Tab.0.bottom" timestamp="1581654581999">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -162,10 +179,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1225" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581497502131" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1581651230067">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1581654852833">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581651230067" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581654852833" />
     <state x="645" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1581651000954">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
