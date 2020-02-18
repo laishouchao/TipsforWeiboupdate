@@ -22,9 +22,8 @@ class getInfo(object):
         return response
 
 
-class send_massage:
+class send_qunmassage:
     def __init__(self, qunname, countext):
-        itchat.auto_login(enableCmdQR=True, hotReload=True)
         self.gname = qunname
         self.context = countext
 
@@ -46,15 +45,29 @@ class send_massage:
                 print('[x]未发现指定的群名称，请检查后重试')
 
 
+class send_massage:
+    def __init__(self, friendsname, countext):
+        self.friendsname = friendsname
+        self.context = countext
+
+    def sendmsg(self):
+        friends_list = itchat.get_friends(update=True)
+        # 想给谁发信息，先查找到这个朋友
+        users = itchat.search_friends(name=self.friendsname)
+        # 找到UserName
+        userName = users[0]['UserName']
+        # 然后给他发消息
+        itchat.send(self.context, toUserName=userName)
+
+
 if __name__ == '__main__':
-    # 添加时间戳，后期做日志
-    now = datetime.datetime.now()
-    now_time = str(now.strftime("%Y-%m-%d %H:%M:%S"))
     # 登录微信
     itchat.auto_login(enableCmdQR=2, hotReload=True)
     # 循环15分钟查询一次微博更新
     message_old = "null"
     while (1 == 1):
+        # 添加时间戳，后期做日志
+        now = datetime.datetime.now()
         # 获取动态信息
         getInfoinit = getInfo()
         info = getInfoinit.Getinfo()
@@ -73,25 +86,33 @@ if __name__ == '__main__':
                     from_text = infoinit["statuses"][0]["text"]
                 except BaseException:
                     if "error" in info:
-                        print(now_time + "[x]微博API数据获取出现错误：" + infoinit["error"] + "\t错误代码：" + str(
+                        print(str(now.strftime("%Y-%m-%d %H:%M:%S")) + "[x]微博API数据获取出现错误：" + infoinit[
+                            "error"] + "\t错误代码：" + str(
                             infoinit["error_code"]))
                     time.sleep(900)
                     continue
         # 查询是否有微博更新
         if from_text == message_old:
-            print(now_time + "[!]暂无更新内容")
+            print(str(now.strftime("%Y-%m-%d %H:%M:%S")) + "[!]暂无更新内容")
             time.sleep(900)
             continue
         else:
             message_old = from_text
-        send_neirong = now_time + "\n" + from_name + "\n更新微博，内容如下:\n" + from_text + "\n该消息来自开源辟谣机器人TipsforWeiboupdate"
+        send_neirong = str(now.strftime(
+            "%Y-%m-%d %H:%M:%S")) + "\n" + from_name + "\n更新微博，内容如下:\n" + from_text + "\n该消息来自开源辟谣机器人TipsforWeiboupdate"
         print(send_neirong)
         # 调用发送微信的函数
         qunname_list = ["信息化办公室学生群"]
+        friend_list = ["田永擎", "申言梅"]
         for qunname in qunname_list:
-            sendsend = send_massage(qunname=qunname, countext=send_neirong)
+            sendsend = send_qunmassage(qunname=qunname, countext=send_neirong)
             sendsend.SendChatRoomsMsg()
-            print(now_time + "[√]发送消息到群_" + qunname + "成功!")
+            print(str(now.strftime("%Y-%m-%d %H:%M:%S")) + "[√]发送消息到群_" + qunname + "成功!")
+        for friend in friend_list:
+            send_msg = send_massage(friendsname=friend, countext=send_neirong)
+            send_msg.sendmsg()
+            print(str(now.strftime("%Y-%m-%d %H:%M:%S")) + "[√]发送消息到好友_" + friend + "成功!")
+
         # 保持登录状态
         # itchat.run()
         time.sleep(900)
